@@ -1,12 +1,12 @@
 # Changelog
 
-## [Unreleased](https://github.com/mauriciogofas/gofasgalaxpaycartao/tree/HEAD)
+## [Unreleased](https://github.com/mauriciogofas/gofasiugucartao/tree/HEAD)
 
-[Full Changelog](https://github.com/mauriciogofas/gofasgalaxpaycartao/compare/ccbde09a7dbde354493fb76dfd8e6aa8d6e0bfaa...HEAD)
+[Full Changelog](https://github.com/mauriciogofas/gofasiugucartao/compare/0ff7cbd25bf13f2bda47823782336816d8d3eb46...HEAD)
 
 **Closed issues:**
 
-- compatibilidade php8+ [\#5](https://github.com/mauriciogofas/gofasgalaxpaycartao/issues/5)
+- Lançamento v1.0.0 [\#1](https://github.com/mauriciogofas/gofasiugucartao/issues/1)
 
 
 
