@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/mauriciogofas/gofasiugucartao/tree/HEAD)
+## [v1.0.0](https://github.com/mauriciogofas/gofasiugucartao/tree/v1.0.0) (27/03/2024)
 
-[Full Changelog](https://github.com/mauriciogofas/gofasiugucartao/compare/0ff7cbd25bf13f2bda47823782336816d8d3eb46...HEAD)
+[Full Changelog](https://github.com/mauriciogofas/gofasiugucartao/compare/0ff7cbd25bf13f2bda47823782336816d8d3eb46...v1.0.0)
 
 **Closed issues:**
 
