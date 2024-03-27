@@ -1,12 +1,30 @@
 # Changelog
 
-## [Unreleased](https://github.com/mauriciogofas/gofasiugucartao/tree/HEAD)
+## [v4.0.2](https://github.com/mauriciogofas/gofaseficartao/tree/v4.0.2) (05/10/2023)
 
-[Full Changelog](https://github.com/mauriciogofas/gofasiugucartao/compare/0ff7cbd25bf13f2bda47823782336816d8d3eb46...HEAD)
+[Full Changelog](https://github.com/mauriciogofas/gofaseficartao/compare/v4.0.1...v4.0.2)
 
-**Closed issues:**
+**Fixed bugs:**
 
-- Lançamento v1.0.0 [\#1](https://github.com/mauriciogofas/gofasiugucartao/issues/1)
+- Evita erros  na consulta de parcelas quando pagamento não deve ser parcelado [\#5](https://github.com/mauriciogofas/gofaseficartao/issues/5)
+
+## [v4.0.1](https://github.com/mauriciogofas/gofaseficartao/tree/v4.0.1) (02/10/2023)
+
+[Full Changelog](https://github.com/mauriciogofas/gofaseficartao/compare/v4.0.0...v4.0.1)
+
+**Fixed bugs:**
+
+- Melhorada a obtenção de parcelas para o cartão informado [\#4](https://github.com/mauriciogofas/gofaseficartao/issues/4)
+
+## [v4.0.0](https://github.com/mauriciogofas/gofaseficartao/tree/v4.0.0) (01/10/2023)
+
+[Full Changelog](https://github.com/mauriciogofas/gofaseficartao/compare/94923ccfa22a8c8c8f5b8b694bfb9e9eb5c49d6d...v4.0.0)
+
+**Implemented enhancements:**
+
+- 🎉 v4.0.0 \(Substitui o antigo módulo Gerencianet cartão para WHMCS\) [\#3](https://github.com/mauriciogofas/gofaseficartao/issues/3)
+- Opções de parcelamento para cartão salvo [\#2](https://github.com/mauriciogofas/gofaseficartao/issues/2)
+- função para calcular tarifa aplicada às transações [\#1](https://github.com/mauriciogofas/gofaseficartao/issues/1)
 
 
 
