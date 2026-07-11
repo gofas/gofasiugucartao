@@ -125,14 +125,31 @@ if(!function_exists('gic_payment_method')){
 	}
 }
 if(!function_exists('gic_update_stats')){
+	function gic_module_version(){
+		return '1.0.0';
+	}
 	function gic_update_stats(){
 		$params = getGatewayVariables('gofasiugucartao');
 		if($params['sandbox']){
 			return;
 		}
-		$whmcs_url = gic_whmcs_url();
-		$setup_admin = gic_setup_admin();
-		$query = '?software_id=14946&install_url='.$whmcs_url['admin_url'].'&current_version='.gic_get_local_version().'&installer_email='.$setup_admin['email'].'&installer_firstname='.$setup_admin['firstname'].'&installer_lastname='.$setup_admin['lastname'].'&action=charge'.gic_sysinfo();
+		if(empty($params['consent_stats'])){
+			$anon_version = gic_module_version();
+			$anon_id = 'gic-v'.$anon_version;
+			$install_url = $anon_id;
+			$installer_email = $anon_id.'@gofas.net';
+			$installer_firstname = 'gic';
+			$installer_lastname = 'v'.$anon_version;
+		}
+		else{
+			$whmcs_url = gic_whmcs_url();
+			$setup_admin = gic_setup_admin();
+			$install_url = $whmcs_url['admin_url'];
+			$installer_email = $setup_admin['email'];
+			$installer_firstname = $setup_admin['firstname'];
+			$installer_lastname = $setup_admin['lastname'];
+		}
+		$query = '?software_id=14946&install_url='.$install_url.'&current_version='.gic_get_local_version().'&installer_email='.$installer_email.'&installer_firstname='.$installer_firstname.'&installer_lastname='.$installer_lastname.'&action=charge'.gic_sysinfo();
 		$curl = curl_init();
 		curl_setopt($curl, CURLOPT_SSL_VERIFYHOST,0);
 		curl_setopt($curl, CURLOPT_SSL_VERIFYPEER,0);
@@ -231,6 +248,7 @@ if( !function_exists('gic_add_trans') ){
  		$addtransvalues['transid'] = $charge_id;
  		$addtransvalues['date'] = date('d/m/Y');
 		$addtransresults = localAPI( "addtransaction", $addtransvalues, (int)$params['admin']);
+		$gic_update_stats = gic_update_stats();
 		if( $addtransresults['result'] === 'success'){
 			return array('values'=>$addtransvalues, 'result'=>$addtransresults);
 		}
@@ -431,15 +449,13 @@ if(!function_exists('gic_decrypt')){
 }
 if( !function_exists('gic_get_version') ){
 	function gic_get_version($page_id,$referer,$module_version){
-		$currentUser = new \WHMCS\Authentication\CurrentUser; // Require WHMCS 8.0+
-		$admin_ = json_decode(json_encode($currentUser->admin()),true);
-		$admin = ['email'=>$admin_['email'],'firstname'=>$admin_['firstname'],'lastname'=>$admin_['lastname']];
-		$query = 'https://gofas.net/br/updates/?software='.$page_id.'&referer='.$referer.'&version='.$module_version.'&email='.$admin['email'].'&firstname='.$admin['firstname'].'&lastname='.$admin['lastname'].gic_sysinfo();
+		$current_admin = gic_current_admin();
+		$query = '?software_id='.$page_id.'&install_url='.$referer.'&current_version='.$module_version.'&installer_email='.$current_admin['email'].'&installer_firstname='.$current_admin['firstname'].'&installer_lastname='.$current_admin['lastname'].'&action=verify'.gic_sysinfo();
 		$curl = curl_init();
 		curl_setopt($curl, CURLOPT_SSL_VERIFYHOST,0);
 		curl_setopt($curl, CURLOPT_SSL_VERIFYPEER,0);
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER,1);
-		curl_setopt($curl, CURLOPT_URL, $query);
+		curl_setopt($curl, CURLOPT_URL, 'https://gofas.net/br/updates/stats.php'.$query);
 		$available_version_ = curl_exec($curl);
 		$http_status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
 		curl_close($curl);
