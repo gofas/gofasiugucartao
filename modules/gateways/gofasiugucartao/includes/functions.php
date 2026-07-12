@@ -5,7 +5,7 @@
  * @see			https://gofas.net/?p=14946
  * @license		https://gofas.net/?p=9340
  * @support		https://gofas.net/?p=12349
- * @version		1.0.0
+ * @version		1.1.0
  */
 require_once __DIR__ . '/../../../../init.php';
 require_once __DIR__ . '/../../../../includes/gatewayfunctions.php';
@@ -126,7 +126,7 @@ if(!function_exists('gic_payment_method')){
 }
 if(!function_exists('gic_update_stats')){
 	function gic_module_version(){
-		return '1.0.0';
+		return '1.1.0';
 	}
 	function gic_update_stats(){
 		$params = getGatewayVariables('gofasiugucartao');

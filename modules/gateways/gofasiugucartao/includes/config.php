@@ -5,7 +5,7 @@
  * @see			https://gofas.net/?p=14946
  * @license		https://gofas.net/?p=9340
  * @support		https://gofas.net/?p=12349
- * @version		1.0.0
+ * @version		1.1.0
  */
 
 if( !defined('WHMCS')){ die(''); }
@@ -19,7 +19,7 @@ function gofasiugucartao_MetaData(){
 if(!function_exists('gofasiugucartao_config')){
 	function gofasiugucartao_config(){
 		require_once __DIR__.'/functions.php';
-		$module_version = '1.0.0';
+		$module_version = '1.1.0';
 		$module_version_int = (int)preg_replace("/[^0-9]/", "", $module_version);
 		$module_page	= '14946';
 		$verify_install = gic_verifyInstall();
