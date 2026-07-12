@@ -1,6 +1,6 @@
 # Changelog
 
-## [Próxima atualização](https://github.com/gofas/gofasiugucartao/tree/HEAD)
+## [v1.1.0 - 12/07/2026](https://github.com/gofas/gofasiugucartao/releases/tag/v1.1.0)
 
 
 **Melhorias:**
@@ -12,7 +12,7 @@
 
 - Lançamento v1.0.0 - [#1](https://github.com/gofas/gofasiugucartao/issues/1) <a href="https://github.com/gofas/gofasiugucartao/issues?q=is%3Aissue+state%3Aclosed+label%3Agood%20first%20issue" style="color:#a99c9c;text-decoration:none"><code>good first issue</code></a>
 
-[Comparar versões](https://github.com/gofas/gofasiugucartao/compare/v1.0.0...HEAD)
+[Comparar versões](https://github.com/gofas/gofasiugucartao/compare/v1.0.0...v1.1.0)
 
 ## [v1.0.0 - 07/06/2026](https://github.com/gofas/gofasiugucartao/releases/tag/v1.0.0)
 
