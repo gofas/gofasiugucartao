@@ -2,7 +2,7 @@
 
 [![versão](https://img.shields.io/github/v/release/gofas/gofasiugucartao?label=vers%C3%A3o&color=005071&style=flat-square)](https://github.com/gofas/gofasiugucartao/releases/latest)
 [![downloads](https://img.shields.io/endpoint?url=https%3A%2F%2Fgofas.net%2Fwp-json%2Fgofas%2Fv1%2Fbadge%2Fgofasiugucartao&style=flat-square)](https://github.com/gofas/gofasiugucartao/releases/latest)
-[![suporte](https://img.shields.io/badge/suporte-f%C3%B3rum%20gratuito-ff8700?style=flat-square)](https://gofas.net/foruns/)
+[![abrir issue](https://img.shields.io/badge/suporte-abrir%20issue-ff8700?style=flat-square)](https://gofas.net/?p=12349/#new-post)
 
 Processa pagamentos à vista e parcelados via API da iugu, usando a interface nativa de cartão de crédito do WHMCS, sem armazenar os dados do cartão no seu servidor. Desenvolvido pela Gofas Software, é 100% gratuito e de código aberto.
 
@@ -68,7 +68,7 @@ Processa pagamentos à vista e parcelados via API da iugu, usando a interface na
 
 ## Suporte
 
-Fórum de suporte gratuito: https://gofas.net/foruns/
+[Abrir issue](https://gofas.net/?p=12349/#new-post) no fórum do módulo.
 
 ## Licença
 
